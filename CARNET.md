@@ -1,14 +1,16 @@
 # 📒 Mon carnet de bord
 
-**Nom :** 
+**Nom :** BARBIER 
 
-**Prénom :** 
+**Prénom :** Gabrielle 
 
-**Adresse de mon site :** https://______.pythonanywhere.com
+**Adresse de mon site :** [https://______.pythonanywhere.com](https://gabrielle1102.pythonanywhere.com/)
 
 > Modifiez ce fichier directement sur GitHub (icône crayon ✏️) pour répondre aux questions de chaque exercice.
 > Écrivez avec vos propres mots : une réponse courte et juste vaut mieux qu'un long copier-coller ! 🙂
 
+Le code se trouve sur github 
+Mon voisin peut voir mon code car il est mis en ligne sur pythonanywhere.
 ---
 
 ## 🟢 Exercice 1 — Mon premier déploiement
