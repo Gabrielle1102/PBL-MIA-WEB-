@@ -9,19 +9,17 @@
 > Modifiez ce fichier directement sur GitHub (icône crayon ✏️) pour répondre aux questions de chaque exercice.
 > Écrivez avec vos propres mots : une réponse courte et juste vaut mieux qu'un long copier-coller ! 🙂
 
-Le code se trouve sur github 
-Mon voisin peut voir mon code car il est mis en ligne sur pythonanywhere.
 ---
 
 ## 🟢 Exercice 1 — Mon premier déploiement
 
 1. Où se trouve physiquement le code qui fabrique votre page : sur votre ordinateur, sur GitHub ou sur PythonAnywhere ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :Le code se trouve sur github 
 
 2. Pourquoi votre voisin(e) peut-il voir votre site, alors que vous n'avez rien installé sur son ordinateur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Mon voisin peut voir mon code car il est mis en ligne sur pythonanywhere.
 
 ---
 
@@ -29,15 +27,15 @@ Mon voisin peut voir mon code car il est mis en ligne sur pythonanywhere.
 
 1. Dans l'URL `https://www.google.com/maps`, quel est le nom de domaine ? Quel est le chemin ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :Nom de domaine : www.google.com       Chemin : /maps
 
 2. Que veut dire le message *Not Found* ? Qui l'a envoyé : votre navigateur ou le serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : le serveur qui envoie ce message au navigateur car il ne trouve pas de page associée
 
 3. Que se passe-t-il si deux fonctions portent le même nom dans `flask_app.py` ? (Indice : essayez, puis lisez l'Error log.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Si deux fonctions portent le même nom dans flask_app.py Flask peut afficher une erreur au lancement de l’application car les fonctions ont le même nom. Il faut donc leur donner des noms différents 
 
 ---
 
