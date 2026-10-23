@@ -71,15 +71,15 @@
 
 1. Quelle est la différence de rôle entre le HTML et le CSS ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Le nom du paramètre est search_query et sa valeur est chat.
 
 2. Pour afficher votre page `/presentation`, combien de fichiers le navigateur doit-il télécharger ? (Vous pourrez le vérifier à l'exercice suivant !)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :Le serveur plante avec a=bonjour car il essaie sûrement de faire un calcul avec une valeur qui est du texte. Il faudrait vérifier la valeur reçue avant de l'utiliser.
 
 3. Pourquoi faut-il parfois faire **Ctrl + F5** pour voir les changements de CSS ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : C'est dangereux car l'utilisateur pourrait envoyer du code malveillant qui serait exécuté sur la page. Il faut donc sécuriser les données avant de les afficher.
 
 ---
 
