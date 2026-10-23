@@ -4,7 +4,7 @@
 
 **Prénom :** Gabrielle 
 
-**Adresse de mon site :** [https://______.pythonanywhere.com](https://gabrielle1102.pythonanywhere.com/)
+**Adresse de mon site :** (https://gabrielle1102.pythonanywhere.com/)
 
 > Modifiez ce fichier directement sur GitHub (icône crayon ✏️) pour répondre aux questions de chaque exercice.
 > Écrivez avec vos propres mots : une réponse courte et juste vaut mieux qu'un long copier-coller ! 🙂
@@ -43,15 +43,15 @@
 
 1. Quelle est la différence entre ce que le serveur **envoie** et ce que le navigateur **affiche** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : La différence, c’est que le serveur envoie le code HTML au navigateur, mais le navigateur interprète ce code pour afficher une page web avec du texte, des titres et des images.
 
 2. À quoi servent les balises `<h1>`, `<p>`, `<ul>` et `<li>` ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :  Les balises <h1>, <p>, <ul> et <li> servent à organiser le contenu d’une page web. <h1> sert à faire un titre principal, <p> à écrire un paragraphe, <ul> à créer une liste à puces et <li> à ajouter un élément dans cette liste.
 
 3. Pourquoi l'image s'affiche-t-elle alors qu'elle n'est pas sur votre serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : L’image s’affiche même si elle n’est pas sur notre serveur parce qu’elle est hébergée sur un autre serveur. Le navigateur va chercher l’image à l’adresse indiquée dans la balise HTML et l’affiche sur la page.
 
 ---
 
