@@ -25,7 +25,6 @@ def accueil():
 #  Ajoutez vos nouvelles routes ci-dessous 👇
 # ---------------------------------------------------------------
 @app.get("/presentation")
-@app.get("/presentation")
 def presentation():
     return """
     <h1>Gabrielle BARBIER</h1>
@@ -36,7 +35,8 @@ def presentation():
         <li>le sport</li>
         <li>les films</li>
     </ul>
-    """
+    """ # Les triples guillemets """ permettent d'écrire un texte sur plusieurs lignes en Python.
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100">
 
 
 # ---------------------------------------------------------------
