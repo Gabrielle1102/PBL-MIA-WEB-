@@ -27,9 +27,6 @@ def accueil():
 @app.get("/presentation")
 def presentation():
     return render_template("presentation.html", prenom="Gabrielle", nom="Barbier")
-    </ul>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100">
-    """ # Les triples guillemets """ permettent d'écrire un texte sur plusieurs lignes en Python.
     
 
 
