@@ -25,7 +25,6 @@ def accueil():
 #  Ajoutez vos nouvelles routes ci-dessous 👇
 # ---------------------------------------------------------------
 @app.get("/presentation")
-@app.get("/presentation")
 def presentation():
     return """
     <h1>Gabrielle BARBIER</h1>
@@ -36,6 +35,7 @@ def presentation():
         <li>La musique</li>
         <li>Le code (bientôt !)</li>
     </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100">
     """
     return render_template("presentation.html", prenom="Gabrielle", nom="Barbier")
     
