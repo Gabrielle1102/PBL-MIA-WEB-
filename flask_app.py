@@ -25,7 +25,18 @@ def accueil():
 #  Ajoutez vos nouvelles routes ci-dessous 👇
 # ---------------------------------------------------------------
 @app.get("/presentation")
+@app.get("/presentation")
 def presentation():
+    return """
+    <h1>Gabrielle BARBIER</h1>
+    <p>Je suis étudiante en <strong>première année d'école d'ingénieur</strong>.</p>
+    <h2>Ce que j'aime</h2>
+    <ul>
+        <li>Les jeux vidéo</li>
+        <li>La musique</li>
+        <li>Le code (bientôt !)</li>
+    </ul>
+    """
     return render_template("presentation.html", prenom="Gabrielle", nom="Barbier")
     
 
