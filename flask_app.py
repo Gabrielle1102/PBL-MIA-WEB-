@@ -38,7 +38,6 @@ def presentation():
     </ul>
     """
     return render_template("presentation.html", prenom="Gabrielle", nom="Barbier")
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100">
     
 
 
