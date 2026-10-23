@@ -87,19 +87,19 @@
 
 1. Que signifie HTTP ? Qui envoie la **requête** et qui envoie la **réponse** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : HTTP signifie HyperText Transfer Protocol. Le navigateur envoie la requête et le serveur envoie la réponse.
 
 2. Combien de requêtes votre page `/presentation` a-t-elle déclenchées ? Lesquelles ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Ma page /presentation a déclenché 2 requêtes : une pour le fichier HTML et une pour l'image.
 
 3. Que signifie le code `200` ? Et le code `404` de la favicon ?
 
-   > _Ma réponse :_ 
-
+   > _Ma réponse :Le code 200 signifie que la requête a réussi. Le code 404 signifie que la ressource demandée, ici la favicon, n'a pas été trouvée.
+   
 4. Pourquoi les modifications faites dans l'onglet Éléments ne sont-elles pas visibles par les autres visiteurs ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Les modifications dans l'onglet Éléments sont seulement visibles sur mon navigateur et ne modifient pas les fichiers du serveur.
 
 ---
 
@@ -107,15 +107,15 @@
 
 1. Dans l'URL `https://www.youtube.com/results?search_query=chat`, quel est le nom du paramètre ? Quelle est sa valeur ?
 
-   > _Ma réponse :_ 
-
+   > _Ma réponse :Le nom du paramètre est search_query et sa valeur est chat
+   
 2. Pourquoi le serveur plante-t-il avec `a=bonjour` ? Que faudrait-il faire pour l'éviter ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :le serveur plante car il essaie de faire un calcul avec du texte. Il faut vérifier les données reçues avant de les utiliser.
 
 3. Pourquoi est-il dangereux d'afficher **tel quel** ce que l'utilisateur envoie ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : C'est dangereux car l'utilisateur peut envoyer du code malveillant qui pourrait être exécuté sur la page.
 
 ---
 
@@ -123,15 +123,15 @@
 
 1. Quelle est la différence visible entre GET et POST ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Avec GET, les données apparaissent dans l’URL. Avec POST, elles sont envoyées dans le corps de la requête.
 
 2. Pour un formulaire de **recherche**, quelle méthode choisiriez-vous ? Et pour un formulaire de **connexion avec mot de passe** ? Pourquoi ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Pour une recherche, je choisirais GET car on voit les mots recherchés dans l’URL. Pour une connexion, je choisirais POST car le mot de passe n’apparaît pas dans l’URL.
 
 3. Les données envoyées en POST sont-elles vraiment « secrètes » ? (Pensez à ce que vous avez vu dans l'onglet Réseau.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse : Non, les données envoyées en POST ne sont pas vraiment secrètes, car on peut les voir dans l’onglet Réseau du navigateur. Il faut utiliser HTTPS pour sécuriser les échanges.
 
 ---
 
