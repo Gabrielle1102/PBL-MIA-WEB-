@@ -1,0 +1,229 @@
+/* ------------------------------------------------------------
+   Plan de travail d'ingénieure : papier quadrillé, encre foncée,
+   un seul accent violet, et le surligneur jaune pour l'important.
+   ------------------------------------------------------------ */
+:root {
+    --papier: #f4f7f3;
+    --quadrillage: #d9e3dc;
+    --encre: #172033;
+    --encre-douce: #4a5568;
+    --violet: #5b3df5;
+    --violet-fonce: #4326d4;
+    --surligneur: #e9ff70;
+    --titres: "Rockwell", "Roboto Slab", Georgia, serif;
+    --texte: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Le fond de la fenêtre : un quadrillage comme une feuille de dessin technique */
+html {
+    background-color: var(--papier);
+    background-image:
+        linear-gradient(var(--quadrillage) 1px, transparent 1px),
+        linear-gradient(90deg, var(--quadrillage) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Le contenu : une feuille blanche posée sur le quadrillage */
+body {
+    font-family: var(--texte);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--encre);
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 32px 40px;
+    background: #fff;
+    border: 2px solid var(--encre);
+    box-shadow: 8px 8px 0 var(--encre);
+}
+
+/* Menu */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 22px;
+    margin: 0 -32px 32px;
+    padding: 0 32px;
+    background: var(--papier);
+    border-bottom: 2px solid var(--encre);
+}
+
+nav a {
+    display: inline-block;
+    padding: 14px 0 11px;
+    margin-bottom: -2px;
+    color: var(--encre);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: var(--violet);
+    border-bottom-color: var(--violet);
+}
+
+/* Titres */
+h1 {
+    font-family: var(--titres);
+    font-size: clamp(2rem, 7vw, 3.1rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.6em;
+    color: var(--encre);
+}
+
+h2 {
+    font-family: var(--titres);
+    font-size: 1.35rem;
+    margin: 1.8em 0 0.6em;
+    padding-left: 12px;
+    border-left: 6px solid var(--violet);
+}
+
+/* Texte */
+p {
+    max-width: 62ch;
+}
+
+strong {
+    background: linear-gradient(transparent 60%, var(--surligneur) 60%);
+}
+
+a {
+    color: var(--violet);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--violet-fonce);
+}
+
+ul {
+    padding-left: 1.3em;
+}
+
+li {
+    margin: 0.3em 0;
+}
+
+li::marker {
+    color: var(--violet);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.8rem;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid var(--encre);
+}
+
+/* Liste des loisirs : un trait violet à gauche de chaque ligne */
+.liste {
+    list-style: none;
+    padding: 0;
+}
+
+.liste li {
+    margin: 10px 0;
+    padding: 12px 16px;
+    background: var(--papier);
+    border-left: 4px solid var(--violet);
+}
+
+/* Formulaire */
+label {
+    display: block;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 360px;
+    margin-top: 6px;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--encre);
+    background: #fff;
+    border: 2px solid var(--encre);
+    border-radius: 0;
+}
+
+button {
+    padding: 10px 22px;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: var(--violet);
+    border: 2px solid var(--encre);
+    box-shadow: 3px 3px 0 var(--encre);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--violet-fonce);
+}
+
+button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--encre);
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--violet);
+    outline-offset: 2px;
+}
+
+/* Horloge */
+#heure {
+    color: var(--violet);
+    font-variant-numeric: tabular-nums;
+}
+
+#message {
+    color: var(--encre-douce);
+}
+
+/* Page "Ce que je sais de vous" : en-têtes HTTP */
+.entetes {
+    list-style: none;
+    padding: 0;
+}
+
+.entetes li {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 0.92rem;
+    overflow-wrap: anywhere;
+    border-bottom: 1px dotted var(--encre-douce);
+}
+
+/* Téléphone */
+@media (max-width: 640px) {
+    body {
+        margin: 12px;
+        padding: 0 18px 28px;
+        box-shadow: 4px 4px 0 var(--encre);
+    }
+
+    nav {
+        margin: 0 -18px 24px;
+        padding: 0 18px;
+        gap: 0 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button:active {
+        transform: none;
+    }
+}

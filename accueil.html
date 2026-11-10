@@ -2,17 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Accueil</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <nav>
-        <a href="/">Accueil</a>
+        <a href="/" aria-current="page">Accueil</a>
         <a href="/presentation">Présentation</a>
         <a href="/loisirs">Loisirs</a>
+        <a href="/formulaire">Formulaire</a>
+        <a href="/horloge">Horloge</a>
     </nav>
     <h1>Bienvenue sur mon site !</h1>
-    <p>Ce site me sert à découvrir le fonctionnement du Web.</p>
+    <p>Ce site me sert à découvrir le fonctionnement du Web : chaque page est fabriquée par un serveur Flask, puis affichée par ton navigateur.</p>
     <p>Un lien vers un autre site : <a href="https://fr.wikipedia.org/wiki/World_Wide_Web">l'histoire du Web</a>.</p>
+
+    <h2>À visiter</h2>
+    <ul>
+        <li><a href="/presentation">Présentation</a> : qui je suis</li>
+        <li><a href="/loisirs">Loisirs</a> : ce que j'aime faire</li>
+        <li><a href="/formulaire">Formulaire</a> : dis-moi bonjour</li>
+        <li><a href="/horloge">Horloge</a> : l'heure en direct</li>
+    </ul>
 </body>
 </html>

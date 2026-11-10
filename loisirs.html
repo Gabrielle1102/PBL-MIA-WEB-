@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mes loisirs</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -9,11 +10,13 @@
     <nav>
         <a href="/">Accueil</a>
         <a href="/presentation">Présentation</a>
-        <a href="/loisirs">Loisirs</a>
+        <a href="/loisirs" aria-current="page">Loisirs</a>
+        <a href="/formulaire">Formulaire</a>
+        <a href="/horloge">Horloge</a>
     </nav>
     <h1>Mes loisirs</h1>
     <p>Voici <strong>ce que j'aime faire</strong> pendant mon temps libre :</p>
-    <ul>
+    <ul class="liste">
     {% for loisir in loisirs %}
         <li>{{ loisir }}</li>
     {% endfor %}
