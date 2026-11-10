@@ -10,6 +10,7 @@
 
 from flask import Flask, render_template, request, redirect, abort, jsonify
 from datetime import datetime
+from markupsafe import escape
 from zoneinfo import ZoneInfo
 
 app = Flask(__name__)
@@ -30,28 +31,35 @@ def accueil():
 # ---------------------------------------------------------------
 @app.get("/presentation")
 def presentation():
-    return """
-    <h1>Gabrielle BARBIER</h1>
-    <p>Je suis étudiante en <strong>première année d'école d'ingénieur</strong>.</p>
-    <h2>Ce que j'aime</h2>
-    <ul>
-        <li>Les jeux vidéo</li>
-        <li>La musique</li>
-        <li>Le code (bientôt !)</li>
-    </ul>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100">
-    """
-    return render_template("presentation.html", prenom="Gabrielle", nom="Barbier")
+    return render_template(
+        "presentation.html",
+        prenom="Gabrielle",
+        nom="Barbier",
+        loisirs=["Les jeux vidéo", "La musique", "Le code (bientôt !)"],
+    )
+
+
+@app.get("/loisirs")
+def loisirs():
+    return render_template(
+        "loisirs.html",
+        loisirs=["Les jeux vidéo", "La musique", "Le code (bientôt !)"],
+    )
+
 
 @app.get("/bonjour/<prenom>")
 def bonjour(prenom):
-    return f"<h1>Bonjour {prenom} !</h1>"
+    return f"<h1>Bonjour {escape(prenom)} !</h1>"
 
 @app.get("/calcul")
 def calcul():
-    a = int(request.args.get("a", 0))
-    b = int(request.args.get("b", 0))
+    try:
+        a = int(request.args.get("a", 0))
+        b = int(request.args.get("b", 0))
+    except ValueError:
+        return "Erreur : a et b doivent être des nombres entiers.", 400
     return f"{a} + {b} = {a + b}"
+
 
 @app.get("/formulaire")
 def formulaire():
@@ -66,7 +74,7 @@ def salut():
     else:
         prenom = request.args.get("prenom", "inconnu")
         ville = request.args.get("ville", "nulle part")
-    return f"Bonjour {prenom}, qui vient de {ville} ! (reçu en {request.method})"
+    return f"Bonjour {escape(prenom)}, qui vient de {escape(ville)} ! (reçu en {request.method})"
 
 # 3xx : une redirection
 @app.get("/home")

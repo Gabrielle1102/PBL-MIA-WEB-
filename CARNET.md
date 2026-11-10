@@ -19,7 +19,7 @@
 
 2. Pourquoi votre voisin(e) peut-il voir votre site, alors que vous n'avez rien installé sur son ordinateur ?
 
-   > _Ma réponse : Mon voisin peut voir mon code car il est mis en ligne sur pythonanywhere.
+   > _Ma réponse : Mon voisin peut voir mon site parce que le code tourne sur un serveur PythonAnywhere accessible depuis Internet : son navigateur envoie une requête à ce serveur, qui lui renvoie la page. Rien n'a besoin d'être installé chez lui.
 
 ---
 
@@ -71,15 +71,15 @@
 
 1. Quelle est la différence de rôle entre le HTML et le CSS ?
 
-   > _Ma réponse : Le nom du paramètre est search_query et sa valeur est chat.
+   > _Ma réponse : Le HTML décrit la structure et le contenu de la page (titres, paragraphes, listes, images). Le CSS décrit l'apparence (couleurs, polices, marges).
 
 2. Pour afficher votre page `/presentation`, combien de fichiers le navigateur doit-il télécharger ? (Vous pourrez le vérifier à l'exercice suivant !)
 
-   > _Ma réponse :Le serveur plante avec a=bonjour car il essaie sûrement de faire un calcul avec une valeur qui est du texte. Il faudrait vérifier la valeur reçue avant de l'utiliser.
+   > _Ma réponse : 3 fichiers : la page HTML, le fichier style.css et l'image du logo Python.
 
 3. Pourquoi faut-il parfois faire **Ctrl + F5** pour voir les changements de CSS ?
 
-   > _Ma réponse : C'est dangereux car l'utilisateur pourrait envoyer du code malveillant qui serait exécuté sur la page. Il faut donc sécuriser les données avant de les afficher.
+   > _Ma réponse : Le navigateur garde le fichier CSS en mémoire (cache) pour ne pas le retélécharger à chaque fois. Ctrl + F5 force le rechargement depuis le serveur et affiche la nouvelle version.
 
 ---
 
@@ -91,7 +91,7 @@
 
 2. Combien de requêtes votre page `/presentation` a-t-elle déclenchées ? Lesquelles ?
 
-   > _Ma réponse : Ma page /presentation a déclenché 2 requêtes : une pour le fichier HTML et une pour l'image.
+   > _Ma réponse : Ma page /presentation a déclenché 3 requêtes : le fichier HTML, le fichier style.css et l'image du logo Python (plus une requête favicon.ico en 404).
 
 3. Que signifie le code `200` ? Et le code `404` de la favicon ?
 
@@ -111,7 +111,7 @@
    
 2. Pourquoi le serveur plante-t-il avec `a=bonjour` ? Que faudrait-il faire pour l'éviter ?
 
-   > _Ma réponse :le serveur plante car il essaie de faire un calcul avec du texte. Il faut vérifier les données reçues avant de les utiliser.
+   > _Ma réponse : Le serveur plantait (erreur 500) car int("bonjour") n'est pas un nombre. Il faut vérifier les données reçues avant de les utiliser : j'ai corrigé ma route /calcul pour qu'elle renvoie un message d'erreur clair (400) au lieu de planter.
 
 3. Pourquoi est-il dangereux d'afficher **tel quel** ce que l'utilisateur envoie ?
 
