@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Mes loisirs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/presentation">Présentation</a>
+        <a href="/loisirs">Loisirs</a>
+    </nav>
+    <h1>Mes loisirs</h1>
+    <p>Voici <strong>ce que j'aime faire</strong> pendant mon temps libre :</p>
+    <ul>
+    {% for loisir in loisirs %}
+        <li>{{ loisir }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
